@@ -1,0 +1,20 @@
+{
+  "name": "numerica-twitch",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "eslint": "^8.43.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.27.5",
+    "vite": "^4.3.9"
+  },
+  "dependencies": {
+    "tmi.js": "^1.8.5"
+  }
+}
