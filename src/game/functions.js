@@ -1,7 +1,8 @@
-export const gameOptions = {
+export const gameStatus = {
   maxScore: 0,
   lastNumber: 0,
   lastUser: '',
+  blamed: false,
   finished: false,
 };
 
@@ -19,7 +20,6 @@ export function isMaxScore(userNumber, maxScore) {
   return parsedUserNumber > parsedMaxScore;
 }
 
-// eslint-disable-next-line no-shadow
 export function updateUI(gameOptions) {
   const gameSection = document.querySelector('section.game');
 

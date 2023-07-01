@@ -1,4 +1,4 @@
-import { gameOptions, updateUI } from './src/game/functions';
+import { gameStatus, updateUI } from './src/game/functions';
 import { client } from './src/tmi/connection';
 import './style.css';
 
@@ -14,5 +14,5 @@ document.querySelector('#app').innerHTML = /* HTML */ `
   </section>
 `;
 
-updateUI(gameOptions);
+updateUI(gameStatus);
 client.connect();
