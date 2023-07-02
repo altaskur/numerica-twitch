@@ -1,5 +1,6 @@
 # Numerica-twitch Web-version
-![RothioTome-Logo](/public/RothioTome-Logo.png)
+
+![RothioTome-Logo](/public/img/RothioTome-Logo.png)
 A very simple twitch game featuring the Very Simple Twitch Chat plugin
 
 ## Badges
@@ -46,9 +47,17 @@ Build a final version
 
 | Color             | Hex                                                                |
 | :----------------- | ------------------------------------------------------------------ |
-| Light color | ![#f8fafc](https://via.placeholder.com/10/f8fafc?text=+) #0a192f |
-| Dark color | ![#020617](https://via.placeholder.com/10/020617?text=+) #020617 |
-| Emphasis color | ![#991b1b](https://via.placeholder.com/10/991b1b?text=+) #991b1b |
+| BackGround-Color-Primary | ![#730030](https://via.placeholder.com/10/730030?text=+) #730030 |
+| BackGround-Color-Secondary | ![#00EAC0](https://via.placeholder.com/10/00EAC0?text=+) #00EAC0 |
+| Text-Color-Primary | ![#FFE34F](https://via.placeholder.com/10/FFE34F?text=+) #FFE34F |
+| Text-Color-Secondary | ![#DC005D](https://via.placeholder.com/10/DC005D?text=+) #DC005D |
+
+## Fonts Reference
+
+| Element | Font |
+| :--- | :--- |
+| Score-Text | Sniglet |
+| Max-Score-Text | Neko-One |
 
 ## Authors
 

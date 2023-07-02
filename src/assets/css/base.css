@@ -1,0 +1,24 @@
+:root {
+    font-family: NerkoOne, Impact, "Courier New", Georgia, "Times New Roman", serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color:rgba(255 255 255 87%);
+    font-synthesis: none;
+    text-rendering: optimizelegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+
+    background: #730030;
+}
+
+body {
+    margin: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+}
+
+p{
+    margin: 0;
+    padding: 0;
+}
+

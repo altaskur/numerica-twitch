@@ -4,7 +4,7 @@ import './style.css';
 
 document.querySelector('#app').innerHTML = /* HTML */ `
   <section class="game">
-    <header> Max Score: <i></i> </header>
+    <header> <p>Max Score: <i></i></p> </header>
     <main>
       <p></p>
     </main>

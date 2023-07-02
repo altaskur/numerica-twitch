@@ -1,0 +1,17 @@
+@font-face {
+  font-family: NerkoOne;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("NerkoOne"),
+    url("/Fonts/NerkoOne-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Sniglet;
+  font-style: normal;
+  font-weight: 400;
+  src:
+    local("Sniglet-Regular"),
+    url("/Fonts/Sniglet-Regular.ttf") format("truetype");
+}
