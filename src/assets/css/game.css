@@ -9,9 +9,10 @@ section.game{
     flex-direction: column;
     align-items: center;
 
-    margin: 2em;
-
-    width: 80vw;
+    padding-bottom: 1em;
+    
+    width: 500px;
+    height: 500px;
 
     overflow: hidden;
 }
@@ -36,8 +37,8 @@ main{
 }
 
 main section.circle{
-    height: 50vw;
-    width: 50vw;
+    height: var(--circle-width);
+    width: var(--circle-width);
 
     display: grid;
     place-items: center;
@@ -51,4 +52,8 @@ main p{
     font-weight:bold;
     font-size: var(--font-size-score);
     color: #DC005D;
+}
+
+footer i {
+    color: var(--secondary-color);
 }

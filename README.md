@@ -31,6 +31,15 @@ Install dependencies
   npm install
 ```
 
+Add in /public/options/ the Twitch channel
+
+```js
+export const gameOptions = {
+  channels: ['altaskur'], // you can add
+  consecutiveNumbers: false,
+};
+```
+
 Run the server in dev mode
 
 ```bash

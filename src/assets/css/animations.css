@@ -1,5 +1,6 @@
 .blame-animation{
     color:var(--tertiary-color);
+    font-size: var(--font-size-headers-2);
     animation: blamed 0.5s 1 linear forwards
 }
 

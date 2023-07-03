@@ -37,7 +37,13 @@ export function updateUI(gameOptions) {
 
   if (gameOptions.blamed) {
     footerSection.classList.add('blame-animation');
-    footerSection.textContent = `Shame on ${gameOptions.lastUser}!`;
+    footerSection.textContent = 'Shame on ';
+
+    const i = document.createElement('i');
+    i.textContent = gameOptions.lastUser;
+    footerSection.appendChild(i);
+
+    footerSection.innerHTML += '!';
   } else {
     footerSection.classList.remove('blame-animation');
     footerSection.textContent = gameOptions.lastUser;

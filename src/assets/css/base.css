@@ -1,11 +1,12 @@
 :root {
-    --font-size-score:22vw;
-    --font-size-headers: 12vw;
+    --font-size-score:30vw;
+    --font-size-headers: 3em;
 
     --primary-color: #730030;
     --secondary-color:#FFE34F;
     --tertiary-color:#00EAC0;
 
+    --circle-width:60vw;
 
     font-family: NerkoOne, Impact, "Courier New", Georgia, "Times New Roman", serif;
     line-height: 1.5;
