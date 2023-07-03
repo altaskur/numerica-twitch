@@ -1,4 +1,7 @@
 :root {
+    --font-size-score:22vw;
+    --font-size-headers: 12vw;
+
     font-family: NerkoOne, Impact, "Courier New", Georgia, "Times New Roman", serif;
     line-height: 1.5;
     font-weight: 400;

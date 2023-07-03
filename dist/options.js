@@ -1,4 +1,5 @@
 // eslint-disable-next-line import/prefer-default-export
 export const gameOptions = {
-  channels: ['rothiotome', 'altaskur'],
+  channels: ['altaskur'],
+  consecutiveNumbers: true,
 };

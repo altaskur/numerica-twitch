@@ -5,23 +5,41 @@
 }
 
 section.game{
-    display: grid;
-    place-items: center;
-    gap: 1em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin: 2em;
+
+    width: 80vw;
+
+    overflow: hidden;
 }
 
-header {
+header,
+footer{
+    width: 100%;
+    height: 3em;
     display: grid;
     place-items: center;
 
+    font-size: var(--font-size-headers);
     color:#FFE34F;
 }
 
+
 main{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+main section.circle{
+    height: 50vw;
+    width: 50vw;
+
     display: grid;
     place-items: center;
-    width: 8em;
-    height: 8em;
 
     border-radius: 100%;
     background-color: rgb(230 230 230);
@@ -29,7 +47,7 @@ main{
 
 main p{
     font-family: Sniglet, "Comic Sans MS", Verdana, Geneva, Tahoma, sans-serif;
-    font-weight: 600;
-    font-size: 3em;
+    font-weight:bold;
+    font-size: var(--font-size-score);
     color: #DC005D;
 }

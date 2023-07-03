@@ -3,7 +3,6 @@ export const gameStatus = {
   lastNumber: 0,
   lastUser: '',
   blamed: false,
-  finished: false,
 };
 
 export function isNextNumber(userNumber, lastNumber) {
@@ -20,12 +19,26 @@ export function isMaxScore(userNumber, maxScore) {
   return parsedUserNumber > parsedMaxScore;
 }
 
+export function checkConsecutive(consecutive, lastUser, userName) {
+  if (!consecutive && lastUser !== userName) {
+    return true;
+  }
+  if (consecutive) return true;
+  return false;
+}
+
 export function updateUI(gameOptions) {
   const gameSection = document.querySelector('section.game');
 
   const maxScoreDiv = gameSection.querySelector('header i');
   const mainSection = gameSection.querySelector('main p');
   const footerSection = gameSection.querySelector('footer p');
+
+  if (gameOptions.blamed) {
+    footerSection.classList.add('blame-animation');
+  } else {
+    footerSection.classList.remove('blame-animation');
+  }
 
   maxScoreDiv.textContent = gameOptions.maxScore;
   mainSection.textContent = gameOptions.lastNumber;

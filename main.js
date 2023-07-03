@@ -6,7 +6,9 @@ document.querySelector('#app').innerHTML = /* HTML */ `
   <section class="game">
     <header> <p>Max Score: <i></i></p> </header>
     <main>
-      <p></p>
+      <section class="circle">
+        <p></p>
+      </section>
     </main>
     <footer>
       <p></p>

@@ -4,7 +4,7 @@
   font-weight: 400;
   src:
     local("NerkoOne"),
-    url("/Fonts/NerkoOne-Regular.ttf") format("truetype");
+    url("/Fonts/Nerko_One/NerkoOne-Regular.ttf") format("truetype");
 }
 
 @font-face {
@@ -13,5 +13,14 @@
   font-weight: 400;
   src:
     local("Sniglet-Regular"),
-    url("/Fonts/Sniglet-Regular.ttf") format("truetype");
+    url("/Fonts/Sniglet/Sniglet-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: Sniglet-ExtraBold;
+  font-style: normal;
+  font-weight: 200;
+  src:
+    local("Sniglet-ExtraBold"),
+    url("/Fonts/Sniglet/Sniglet-ExtraBold.ttf") format("truetype");
 }
