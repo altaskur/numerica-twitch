@@ -3,6 +3,7 @@ export const gameStatus = {
   lastNumber: 0,
   lastUser: '',
   blamed: false,
+  finish: false,
 };
 
 export function isNextNumber(userNumber, lastNumber) {
@@ -36,11 +37,28 @@ export function updateUI(gameOptions) {
 
   if (gameOptions.blamed) {
     footerSection.classList.add('blame-animation');
+    footerSection.textContent = `Shame on ${gameOptions.lastUser}!`;
   } else {
     footerSection.classList.remove('blame-animation');
+    footerSection.textContent = gameOptions.lastUser;
   }
 
   maxScoreDiv.textContent = gameOptions.maxScore;
   mainSection.textContent = gameOptions.lastNumber;
-  footerSection.textContent = gameOptions.lastUser;
+}
+
+export function getLocalMaxScore() {
+  const storedMaxScore = localStorage.getItem('maxScore');
+  if (storedMaxScore) return JSON.parse(storedMaxScore);
+  return false;
+}
+
+export function setLocalMaxScore(maxScore) {
+  localStorage.setItem('maxScore', JSON.stringify(maxScore));
+}
+
+export function initLocalMaxScore(gameOptions) {
+  const storedMaxScore = getLocalMaxScore();
+  if (storedMaxScore) return storedMaxScore;
+  return gameOptions.maxScore;
 }

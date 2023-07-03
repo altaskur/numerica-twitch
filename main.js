@@ -1,10 +1,14 @@
-import { gameStatus, updateUI } from './src/game/functions';
+import { gameStatus, initLocalMaxScore, updateUI } from './src/game/functions';
 import { client } from './src/tmi/connection';
 import './style.css';
 
 document.querySelector('#app').innerHTML = /* HTML */ `
   <section class="game">
-    <header> <p>Max Score: <i></i></p> </header>
+    <header>
+      <p>
+        high Score: <i></i>
+      </p>
+    </header>
     <main>
       <section class="circle">
         <p></p>
@@ -16,5 +20,6 @@ document.querySelector('#app').innerHTML = /* HTML */ `
   </section>
 `;
 
+gameStatus.maxScore = initLocalMaxScore(gameStatus);
 updateUI(gameStatus);
 client.connect();

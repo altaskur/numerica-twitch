@@ -24,7 +24,8 @@ footer{
     place-items: center;
 
     font-size: var(--font-size-headers);
-    color:#FFE34F;
+    color:var(--secondary-color);
+    text-align: center;
 }
 
 
@@ -42,7 +43,7 @@ main section.circle{
     place-items: center;
 
     border-radius: 100%;
-    background-color: rgb(230 230 230);
+    background-color:var(--tertiary-color);
 }
 
 main p{

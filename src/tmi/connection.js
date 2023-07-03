@@ -1,7 +1,7 @@
 import tmi from 'tmi.js';
 import {
   checkConsecutive,
-  gameStatus, isMaxScore, isNextNumber, updateUI,
+  gameStatus, isMaxScore, isNextNumber, setLocalMaxScore, updateUI,
 } from '../game/functions';
 import { gameOptions } from '../../public/options';
 
@@ -12,7 +12,7 @@ export const client = new tmi.Client({
 
 client.on('message', (channel, tags, message) => {
   const userNumber = parseInt(message.toString().trim(), 10);
-  const userName = tags['display-name'].toString().trim().toLocaleLowerCase();
+  const userName = tags['display-name'].toString().trim();
 
   if (/^[1-9]\d*$/.test(userNumber)) {
     console.log('Formato Correcto');
@@ -22,11 +22,16 @@ client.on('message', (channel, tags, message) => {
       if (isNextNumber(userNumber, gameStatus.lastNumber)) {
         console.log('Número correcto');
         gameStatus.blamed = false;
+        gameStatus.finish = false;
         gameStatus.lastNumber = userNumber;
-        if (maxScore) gameStatus.maxScore = gameStatus.lastNumber;
+        if (maxScore) {
+          gameStatus.maxScore = gameStatus.lastNumber;
+          setLocalMaxScore(gameStatus.maxScore);
+        }
       } else {
         gameStatus.lastNumber = 0;
         gameStatus.blamed = true;
+        gameStatus.finish = true;
       }
       gameStatus.lastUser = userName;
       updateUI(gameStatus);
